@@ -1,0 +1,37 @@
+:root {
+    --black: rgb(8,8,8);
+    --black-less: rgb(15,15,15);
+    --black-chat: rgb(18,18,18);
+    --black-page: rgb(20,21,22);
+
+    --white: rgb(168, 168, 168);
+    --white-s: rgb(189, 189, 189);
+    --white-q: rgb(136, 136, 136);
+    --white-less: rgb(100,100,100);
+
+    --orange: rgb(204, 96, 57);
+    --orange-msg: rgb(87, 38, 12);
+
+    --border: rgb(39, 39, 39);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    background-color: var(--black-page);
+    color: var(--white);
+}
+a {
+    color: var(--orange);
+    text-decoration: none;
+    font-weight: 600;
+}
+a:hover {
+    text-decoration: underline;
+}
+p {
+    font-family: 'Segoe UI';
+}

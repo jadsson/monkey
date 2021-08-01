@@ -1,0 +1,296 @@
+@import url(global.css);
+#content {
+    max-width: 1600px;
+    width: 98vw;
+    margin: 20px auto 10px auto;
+}
+.top {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px 10px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--black-chat);
+
+}
+.top h1 {
+    color: var(--orange);
+}
+.top .menu {
+    display: flex;
+}
+.logout {
+    width: 40px;
+    margin: 0 20px;
+}
+.logout img {
+    width: 100%;
+}
+#form-search {
+    margin-right: 20px;
+    width: 300px;
+    max-width: 60vw;
+
+    position: relative;
+
+}
+#form-search .search-users-div {
+    position: absolute;
+    background: var(--black);
+    border: 1px solid var(--border);
+    box-shadow: 0px 10px 15px 4px var(--black);
+    z-index: 2;
+    top: 100%;
+    right: 0;
+    left: 0;
+    padding: 5px;
+
+    border-radius: 6px;
+    display: none;
+    max-height: 400px;
+    overflow-y: auto;
+
+}
+#form-search .search-users-div .user.search-list {
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0px 0px 15px;
+    cursor: pointer;
+}
+#form-search .search-users-div .user.search-list:hover {
+    background: var(--black-chat);
+}
+#form-search .search-users-div img {
+    width: 50px;
+}
+#form-search .search-users-div h3, 
+#form-search .search-users-div p {
+    font-size: .8em;
+}
+#form-search .form-div {
+    position: relative;
+    background-color: var(--white);
+    border-radius: 25px;
+    padding: 5px;
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+}
+#form-search #input {
+    background: none;
+    border: none;
+    outline: none;
+
+    height: 100%;
+    width: 80%;
+    padding-left: 15px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+#form-search #input:focus {
+    background: var(--white-s);
+}
+#form-search #button {
+    cursor: pointer;
+
+    border: none;
+    outline: none;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 20%;
+    background: var(--white-s);
+}
+
+/* content center left page 'USERS' */
+.body {
+    border: 1px solid var(--border);
+    margin-top: 20px;
+    border-radius: 6px;
+    height: calc(100vh - 130px);
+    overflow: hidden;
+
+    display: flex;
+    box-shadow: 0 0 10px 4px var(--black);
+}
+.body .users {
+    max-width: 300px;
+    width: 60vw;
+    height: 100%;
+    overflow-y: auto;
+    background: var(--black-chat);
+}
+::-webkit-scrollbar {
+    width: 7px;
+    background: var(--border);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--white);
+    border-radius: 4px;
+}
+.body .users .user {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--border);
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.body .users .user:hover {
+    background: var(--black-less);
+}
+.body .users .user img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.body .users .user div {
+    pointer-events: none;
+}
+.body .users .user p {
+    color: var(--white-less);
+}
+
+/* content center right page 'CHAT' */
+.body .chat {
+    width: 100%;
+    background: var(--black-chat);
+    overflow: hidden;
+
+    position: relative;
+}
+.body .chat .top-chat {
+    padding: 10px 30px 0 30px;
+    width: 100%;
+    background: var(--black-chat);
+    box-shadow: 0 0 10px 5px var(--black);
+    border-left: 1px solid var(--border);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.body .chat .top-chat .you-content,
+.body .chat .top-chat .friend-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.reload-friend-chat {
+    display: flex;
+    justify-content: baseline;
+    align-items: baseline;
+}
+.reload-friend-chat .reload-chat {
+    padding: 10px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.body .chat .top-chat .friend-content {
+    color: var(--orange);
+}
+.body .chat .top-chat img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+/* 'CHAT' msg */
+.body .chat .section-msg {
+    height: calc(100% - 180px);
+    overflow-y: auto;
+    padding: 30px 20px 0 20px;
+    position: relative;
+    border-left: 1px solid var(--border);
+}
+.body .chat .msg {
+    padding: 10px;
+    max-width: 670px;
+    width: 45vw;
+    background: var(--border);
+    margin: 25px 0;
+    border-radius: 6px;
+    line-height: 26px;
+    letter-spacing: .02em;
+
+    box-shadow: 2px 0 8px 0px var(--black);
+}
+.body .chat .msg p:nth-child(2) {
+    font-size: 14px;
+    color: var(--white-less);
+    margin-top: 5px;
+}
+/* msg friend  */
+#msg-r {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: -25px 0;
+}
+#msg-r .msg {
+    background: var(--orange-msg);
+}
+#msg-r .msg p:nth-child(2) {
+    color: var(--white-q);
+}
+
+/* content center page 'SEND MESSAGE' */
+.send-msg {
+    padding: 10px 0;
+    height: 100%;
+    min-height: 70px;
+    border-top: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+}
+.send-msg .form-msg {
+    width: 90%;
+    margin: auto;
+    border-radius: 25px;
+}
+.send-msg .form-msg .msg-form-div {
+    width: 100%;
+    height: 50px;
+    background: var(--white);
+    border-radius: 25px;
+    overflow: hidden;
+
+    position: relative;
+}
+.send-msg .form-msg .msg-form-div .input-send {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 90%;
+    height: 100%;
+
+    font-size: 1em;
+    background: none;
+    outline: none;
+    border: none;
+    padding-left: 15px;
+}
+.send-msg .form-msg .msg-form-div .input-send:focus {
+    background: var(--white-s);
+}
+.send-msg .form-msg .msg-form-div .btn-send {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 10%;
+
+    border: none;
+    background: var(--white-s);
+    cursor: pointer;
+}
