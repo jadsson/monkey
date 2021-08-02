@@ -73,10 +73,6 @@
                         return true;
                     }
 
-                    // if($stmt) {
-                    //     $l = new ModelUser;
-                    //     $l->UserLogin($p->getEmail(), $p->getPass());
-                    // }
                 }
             }
         }
@@ -111,7 +107,7 @@
 
         function ShowOneUser($id) {
 
-            $sql = "SELECT * FROM users WHERE id_user = ?";
+            $sql = "SELECT username, perfil_img  FROM users WHERE id_user = ?";
             $stmt = Conect::Con()->prepare($sql);
             $stmt->bindValue(1, $id);
             $stmt->execute();

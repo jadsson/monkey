@@ -15,6 +15,12 @@
 
 # Detalhes da aplicação
 
+## Funcionalidades
+- todos os usuários cadastrados são listados ao lado do chat
+- o usuário que fez login aparece no conta esquerdo da parte direita superior do chat e não aparece na lista lateral nem na lista de pesquisados, assim não é possível que inicie um chat consigo mesmo
+- para iniciar um chat com algum usuário basta clicar sobre ele tanto na lista lateral quanto na lista de pesquisados
+- para ver as mensagens mais recentes de cada chat basta clicar no reload 
+
 ## PHP
 - classes com métodos instanciados em arquivos dentro da pasta requests, todos os arquivos retornam um json
 - há três pastas dentro de requests: chat, message, user
@@ -38,7 +44,7 @@
     - requisição para as mensagens do chat
 - ao clicar no campo de busca o evento "keyup" faz requisição para o método que retorna os usuários que contém os caracteres digitados no username
 - ao clicar em um usuário na lista de pesquisados é feita a requisição do chat entre você e aquele usuário
-- ao clicar no ícone de reload, o chat é atualizado com nova requisição ajax
+- ao clicar no ícone de reload, o chat é requisitado e renderizado novamente
 
 ## JS componentes
 - lista de usuários 

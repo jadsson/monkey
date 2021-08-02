@@ -76,6 +76,16 @@
             return [];
         }
 
+        function ReadLastMsg($chatId) {
+            $sql = "SELECT msg_content, date_msg, who_send FROM `chat_msg` WHERE fk_chat = '$chatId' ORDER BY date_msg DESC LIMIT 1";
+            $stmt = Conect::Con()->query($sql);
+            if($stmt->rowCount() > 0) {
+                $r = $stmt->fetch(PDO::FETCH_ASSOC);
+                return $r;
+            }
+            return [];
+        }
+
         function DellMsg() {
 
         }
