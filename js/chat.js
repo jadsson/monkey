@@ -134,7 +134,7 @@ if(sendMessageButton) {
 }
 
 function SendMessage(chat, msg) {
-    if(inputIdChat.value.trim() != '') {
+    if(sendMessageInput.value.trim() != '') {
   
         const ajax = new XMLHttpRequest;
         ajax.open('POST', 'http://localhost/ajax/chat/requests/message/create.php');
